@@ -60,7 +60,7 @@ jobs:
             # Descargar la última versión de la imagen
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ms-gestion-transporte:latest
             # Parar y eliminar cualquier contenedor previo
-            docker stop my-app || true && docker rm my-app || true
+            docker stop my-app || true && docker rm ms-gestion-transporte || true
             # Iniciar el contenedor
             docker run -d --name my-app -p 8082:8082 ${{ secrets.DOCKERHUB_USERNAME }}/ms-gestion-transporte:latest
           EOF
