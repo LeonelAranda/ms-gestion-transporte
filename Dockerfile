@@ -21,6 +21,6 @@ COPY --from=buildstage /app/target/ms-gestion-transporte-0.0.1.jar /app/ms-gesti
 COPY Wallet_DbCapstone /app/oracle_wallet
 
 ENV TNS_ADMIN=/app/wallet
-EXPOSE 8080
+EXPOSE 8082
 
 ENTRYPOINT [ "java", "-jar","/app/ms-gestion-transporte-0.0.1.jar" ]
